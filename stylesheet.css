@@ -1,0 +1,118 @@
+*{
+  /* border-style: solid;
+  border-color: orange; */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color:#333;
+}
+body{
+  display:grid;
+  grid-template-areas: " header header"
+                        " main main"
+                        "footer footer";
+  grid-template-rows: auto 4fr 1fr;
+  grid-template-columns:1fr 1fr;
+}
+header{
+  width:100%;
+  grid-area:header;
+  height:50px;
+}
+li{
+  list-style-type: none;
+  text-decoration: none;
+}
+#navbar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-color: blue;
+}
+
+nav ul{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main{
+  grid-area:main;
+  border-color:green;
+  /* margin:0 auto; */
+  display:grid;
+  align-items: center;
+  justify-items:center;
+  grid-template-areas:"logo logo"
+                      "form form";
+  grid-template-rows: 300px 75px;
+
+}
+.logo{
+  max-width:278px;
+  border-color: blue;
+  grid-area:logo;
+}
+
+form{
+  grid-area:form;
+  border-color:red;
+  display:grid;
+  width:90%;
+  max-width:500px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "searchbar searchbar"
+                       "searchbutton searchbutton"
+                       "french french";
+}
+input{
+  /* width:90%; */
+  height:40px;
+  border-radius:30px;
+  grid-area:searchbar;
+  border-width: thin;
+  border-color:#f2f2f2;
+}
+button{
+  max-width:180px;
+  padding:10px 15px;
+  margin:20px auto;
+  border-radius: 3px;
+  border-style:none;
+  background-color:#f2f2f2;
+
+}
+p{
+  grid-area:french;
+
+
+}
+footer{
+  grid-area:footer;
+  display:flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content:flex-end;
+
+}
+#canada{
+  background-color:#f2f2f2;
+  width:100%;
+  height: 20px;
+  padding:15px;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color:#e6e6e6;
+
+
+}
+footer ul{
+  margin:0;
+  width:100%;
+  list-style-type: none;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+footer li {
+  padding:15px 0;
+}
